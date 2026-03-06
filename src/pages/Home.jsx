@@ -1,33 +1,17 @@
-import { Box, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-export default function Home(){
+function Home() {
+  const navigate = useNavigate();
 
-    const navigate = useNavigate();
+  return (
+    <div>
+      <h1>SmartHome IoT</h1>
 
-    return(
-        <Box
-        sx={{
-            display:"flex",
-            flexDirection:"column",
-            justifyContent:"center",
-            alignItems:"center",
-            height:"100vh"
-        }}
-        >
-
-        <Typography variant="h3">
-            SmartHome IoT
-        </Typography>
-
-        <Button
-            variant="contained"
-            sx={{mt:3}}
-            onClick={()=>navigate("/dashboard")}
-        >
-            IR AL DASHBOARD
-        </Button>
-
-        </Box>
-    )
+      <button onClick={() => navigate("/dashboard")}>
+        IR AL DASHBOARD
+      </button>
+    </div>
+  );
 }
+
+export default Home;
