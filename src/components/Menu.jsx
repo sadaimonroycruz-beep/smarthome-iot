@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
+import "./Menu.css"; // opcional, crea el archivo si quieres estilos
 
-function Menu() {
+const Menu = () => {
   return (
-    <nav>
-      <Link to="/">Dashboard</Link>
-      <Link to="/devices">Devices</Link>
-      <Link to="/settings">Settings</Link>
+    <nav style={{ padding: "10px", background: "#333", display: "flex", gap: "20px" }}>
+      <Link to="/" style={{ color: "white", textDecoration: "none" }}>Portada</Link>
+      <Link to="/dashboard" style={{ color: "white", textDecoration: "none" }}>Dashboard</Link>
+      <Link to="/devices" style={{ color: "white", textDecoration: "none" }}>Devices</Link>
+      <Link to="/settings" style={{ color: "white", textDecoration: "none" }}>Settings</Link>
     </nav>
   );
-}
+};
 
 export default Menu;

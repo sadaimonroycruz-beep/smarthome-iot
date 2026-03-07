@@ -1,6 +1,5 @@
-// src/pages/Settings.jsx
-import React from 'react';
-import PageContainer from '../components/PageContainer/PageContainer';
+import React from "react";
+import PageContainer from "../components/PageContainer/PageContainer";
 
 const Settings = () => {
   return (

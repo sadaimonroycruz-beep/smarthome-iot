@@ -1,20 +1,19 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Home(){
+const Home = () => {
+  return (
+    <div style={{textAlign:"center", padding:"50px"}}>
+      <h1>SmartHome IoT</h1>
+      <p>Control y monitoreo de sensores inteligentes</p>
 
-  return(
-    <div style={{padding:"30px"}}>
-
-      <h1>IoT para Hogares Inteligentes</h1>
-
-      <Link to="/devices">Configuración de los dispositivos</Link>
-
-      <br/>
-      <br/>
-
-      <Link to="/dashboard">Panel de control</Link>
-
+      <Link to="/dashboard">
+        <button style={{padding:"10px 20px", marginTop:"20px"}}>
+          Ir al Dashboard
+        </button>
+      </Link>
     </div>
-  )
+  );
+};
 
-}
+export default Home;

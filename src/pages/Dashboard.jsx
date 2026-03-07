@@ -1,19 +1,28 @@
-import PageContainer from "../components/PageContainer/PageContainer";
+import React from "react";
 
 const Dashboard = () => {
   return (
-    <PageContainer title="IoT para Hogares Inteligentes">
-      <div style={{ display: "flex", gap: "20px", marginBottom: "30px" }}>
-        <div style={{ background: "white", padding: "20px", borderRadius: "8px", flex: 1, textAlign: "center", fontSize: "32px" }}>600</div>
-        <div style={{ background: "white", padding: "20px", borderRadius: "8px", flex: 1, textAlign: "center", fontSize: "32px" }}>450</div>
-        <div style={{ background: "white", padding: "20px", borderRadius: "8px", flex: 1, textAlign: "center", fontSize: "32px" }}>300</div>
-        <div style={{ background: "white", padding: "20px", borderRadius: "8px", flex: 1, textAlign: "center", fontSize: "32px" }}>150</div>
-        <div style={{ background: "white", padding: "20px", borderRadius: "8px", flex: 1, textAlign: "center", fontSize: "32px" }}>0</div>
+    <div style={{padding:"40px"}}>
+      <h1>Dashboard</h1>
+
+      <div style={{
+        display:"flex",
+        gap:"20px",
+        marginTop:"30px"
+      }}>
+        <div style={{background:"#1e3a8a",color:"white",padding:"20px",borderRadius:"10px"}}>
+          Active Devices: 20
+        </div>
+
+        <div style={{background:"#1e3a8a",color:"white",padding:"20px",borderRadius:"10px"}}>
+          Alerts: 15
+        </div>
+
+        <div style={{background:"#1e3a8a",color:"white",padding:"20px",borderRadius:"10px"}}>
+          Users: 4
+        </div>
       </div>
-      <div style={{ background: "white", padding: "20px", borderRadius: "8px" }}>
-        <h3>Ene - Febrero - Mar</h3>
-      </div>
-    </PageContainer>
+    </div>
   );
 };
 
