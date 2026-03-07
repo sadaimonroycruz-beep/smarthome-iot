@@ -1,33 +1,20 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-import Portada from "./pages/Portada";
-import Home from "./pages/Home";
-import Dashboard from "./pages/Dashboard";
-import Devices from "./pages/Devices";
-import Settings from "./pages/Settings";
+// src/App.jsx
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Dashboard from './pages/Dashboard'; // tu página principal actual
+import Devices from './pages/Devices';
+import Settings from './pages/Settings';
+import Menu from './components/Menu'; // tu componente de menú
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
+      <Menu />
       <Routes>
-
-        {/* PORTADA */}
-        <Route path="/" element={<Portada />} />
-
-        {/* HOME */}
-        <Route path="/home" element={<Home />} />
-
-        {/* DASHBOARD */}
-        <Route path="/dashboard" element={<Dashboard />} />
-
-        {/* DEVICES */}
+        <Route path="/" element={<Dashboard />} />
         <Route path="/devices" element={<Devices />} />
-
-        {/* SETTINGS */}
         <Route path="/settings" element={<Settings />} />
-
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 

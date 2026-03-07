@@ -1,13 +1,13 @@
-import PageContainer from "../components/PageContainer";
+// src/pages/Settings.jsx
+import React from 'react';
+import PageContainer from '../components/PageContainer/PageContainer';
 
-function Settings() {
+const Settings = () => {
   return (
     <PageContainer title="Settings">
-
-      <p>Configuración del sistema SmartHome.</p>
-
+      <p>Configuración de la aplicación.</p>
     </PageContainer>
   );
-}
+};
 
 export default Settings;
