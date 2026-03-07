@@ -6,37 +6,31 @@ function Portada() {
   return (
     <div style={styles.container}>
       <div style={styles.card}>
-        <h1 style={styles.title}>UNIVERSIDAD POLITÉCNICA DE ATLACOMULCO</h1>
-        <h2 style={styles.subtitle}>Ingeniería En Sistemas Computacionales</h2>
-
-        <div style={styles.section}>
-          <p style={styles.label}>ASIGNATURA:</p>
-          <p style={styles.value}>Programación Web</p>
+        <h1 style={styles.university}>UNIVERSIDAD POLITÉCNICA DE ATLACOMULCO</h1>
+        <h2 style={styles.career}>Ingeniería en Sistemas Computacionales</h2>
+        
+        <div style={styles.infoGrid}>
+          <div style={styles.infoItem}>
+            <span style={styles.label}>ASIGNATURA:</span>
+            <span style={styles.value}>Programación Web</span>
+          </div>
+          <div style={styles.infoItem}>
+            <span style={styles.label}>PRESENTADO POR:</span>
+            <span style={styles.value}>Monroy Cruz Zuri Saday</span>
+          </div>
+          <div style={styles.infoItem}>
+            <span style={styles.label}>DOCENTE:</span>
+            <span style={styles.value}>Ing. Jhovani del Boque Florentino</span>
+          </div>
         </div>
 
-        <div style={styles.section}>
-          <p style={styles.label}>PRESENTADO POR:</p>
-          <p style={styles.value}>Monroy Cruz Zuri Saday</p>
-        </div>
-
-        <div style={styles.section}>
-          <p style={styles.label}>DOCENTE:</p>
-          <p style={styles.value}>Ing. Jhovani del Boque Florentino</p>
-        </div>
-
-        <p style={styles.date}>Atlacomulco, México a 27 de Febrero 2026</p>
+        <p style={styles.date}>Atlacomulco, México a Marzo 2026</p>
 
         <button 
           onClick={() => navigate('/dashboard')}
           style={styles.button}
-          onMouseEnter={(e) => {
-            e.target.style.backgroundColor = '#0056b3';
-            e.target.style.transform = 'scale(1.05)';
-          }}
-          onMouseLeave={(e) => {
-            e.target.style.backgroundColor = '#007bff';
-            e.target.style.transform = 'scale(1)';
-          }}
+          onMouseOver={(e) => e.target.style.backgroundColor = '#0056b3'}
+          onMouseOut={(e) => e.target.style.backgroundColor = '#007bff'}
         >
           Entrar al Dashboard
         </button>
@@ -51,80 +45,75 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     minHeight: '100vh',
-    width: '100vw',
-    margin: 0,
-    padding: 0,
-    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', // Gradiente moderno
-    fontFamily: "'Poppins', 'Arial', sans-serif", // Tipografía moderna (asegúrate de tenerla o cambia a 'Segoe UI', etc.)
+    background: 'linear-gradient(135deg, #0b3b5c, #1a4e7a)', // Azul degradado
+    fontFamily: 'Arial, sans-serif',
+    padding: '20px',
   },
   card: {
-    maxWidth: '700px',
-    width: '90%',
     backgroundColor: 'rgba(255, 255, 255, 0.95)',
-    backdropFilter: 'blur(10px)',
-    padding: '50px 40px',
-    borderRadius: '20px',
-    boxShadow: '0 20px 40px rgba(0,0,0,0.2)',
+    padding: '40px',
+    borderRadius: '16px',
+    boxShadow: '0 10px 30px rgba(0, 0, 0, 0.2)',
+    maxWidth: '600px',
+    width: '100%',
     textAlign: 'center',
-    border: '1px solid rgba(255,255,255,0.3)',
   },
-  title: {
-    fontSize: '2.5rem',
-    fontWeight: 700,
-    color: '#2d3748',
-    marginBottom: '0.5rem',
-    lineHeight: 1.2,
+  university: {
+    fontSize: '28px',
+    fontWeight: 'bold',
+    color: '#0b3b5c',
+    marginBottom: '5px',
+    borderBottom: '3px solid #007bff',
+    paddingBottom: '10px',
   },
-  subtitle: {
-    fontSize: '1.8rem',
-    fontWeight: 400,
-    color: '#4a5568',
-    marginBottom: '2rem',
-    borderBottom: '2px solid #e2e8f0',
-    paddingBottom: '1rem',
+  career: {
+    fontSize: '22px',
+    color: '#1a4e7a',
+    marginBottom: '30px',
+    fontWeight: 'normal',
   },
-  section: {
-    marginBottom: '1.5rem',
+  infoGrid: {
     textAlign: 'left',
-    borderLeft: '4px solid #4299e1',
-    paddingLeft: '1.5rem',
+    marginBottom: '30px',
+  },
+  infoItem: {
+    marginBottom: '15px',
+    padding: '10px',
+    backgroundColor: '#f0f8ff',
+    borderRadius: '8px',
+    borderLeft: '5px solid #007bff',
   },
   label: {
-    fontSize: '1.2rem',
-    fontWeight: 600,
-    color: '#2c5282',
-    margin: '0 0 0.25rem 0',
-    textTransform: 'uppercase',
-    letterSpacing: '0.5px',
+    fontSize: '16px',
+    fontWeight: 'bold',
+    color: '#0b3b5c',
+    display: 'block',
+    marginBottom: '5px',
   },
   value: {
-    fontSize: '1.5rem',
-    fontWeight: 500,
-    color: '#1a202c',
-    margin: 0,
+    fontSize: '18px',
+    color: '#1a4e7a',
+    fontWeight: '500',
   },
   date: {
-    marginTop: '2rem',
-    fontSize: '1.2rem',
-    color: '#718096',
+    fontSize: '18px',
+    color: '#555',
     fontStyle: 'italic',
-    borderTop: '1px dashed #cbd5e0',
-    paddingTop: '1.5rem',
+    marginTop: '20px',
+    paddingTop: '20px',
+    borderTop: '1px dashed #ccc',
   },
   button: {
-    marginTop: '2.5rem',
-    padding: '14px 40px',
-    fontSize: '1.2rem',
-    fontWeight: 600,
+    marginTop: '30px',
+    padding: '12px 40px',
+    fontSize: '18px',
     backgroundColor: '#007bff',
     color: 'white',
     border: 'none',
     borderRadius: '50px',
     cursor: 'pointer',
-    boxShadow: '0 4px 15px rgba(0,123,255,0.4)',
-    transition: 'all 0.3s ease',
-    outline: 'none',
-    letterSpacing: '1px',
+    boxShadow: '0 4px 6px rgba(0,123,255,0.3)',
+    transition: 'background 0.3s',
   },
 };
 
