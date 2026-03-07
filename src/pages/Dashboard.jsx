@@ -1,26 +1,20 @@
-export default function Dashboard(){
+import PageContainer from "../components/PageContainer/PageContainer";
 
-  return(
-
-    <div style={{padding:"30px"}}>
-
-      <h1>Dashboard</h1>
-
-      <div style={{display:"flex", gap:"20px"}}>
-
-        <div>Devices: 20</div>
-        <div>Active: 15</div>
-        <div>Alerts: 5</div>
-        <div>Users: 4</div>
-
+const Dashboard = () => {
+  return (
+    <PageContainer title="IoT para Hogares Inteligentes">
+      <div style={{ display: "flex", gap: "20px", marginBottom: "30px" }}>
+        <div style={{ background: "white", padding: "20px", borderRadius: "8px", flex: 1, textAlign: "center", fontSize: "32px" }}>600</div>
+        <div style={{ background: "white", padding: "20px", borderRadius: "8px", flex: 1, textAlign: "center", fontSize: "32px" }}>450</div>
+        <div style={{ background: "white", padding: "20px", borderRadius: "8px", flex: 1, textAlign: "center", fontSize: "32px" }}>300</div>
+        <div style={{ background: "white", padding: "20px", borderRadius: "8px", flex: 1, textAlign: "center", fontSize: "32px" }}>150</div>
+        <div style={{ background: "white", padding: "20px", borderRadius: "8px", flex: 1, textAlign: "center", fontSize: "32px" }}>0</div>
       </div>
+      <div style={{ background: "white", padding: "20px", borderRadius: "8px" }}>
+        <h3>Ene - Febrero - Mar</h3>
+      </div>
+    </PageContainer>
+  );
+};
 
-      <h2>Sensor Monitoring</h2>
-
-      <p>Aquí va la gráfica de sensores</p>
-
-    </div>
-
-  )
-
-}
+export default Dashboard;
