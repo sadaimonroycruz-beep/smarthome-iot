@@ -1,17 +1,20 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function Home() {
-  const navigate = useNavigate();
+export default function Home(){
 
-  return (
-    <div>
-      <h1>SmartHome IoT</h1>
+  return(
+    <div style={{padding:"30px"}}>
 
-      <button onClick={() => navigate("/dashboard")}>
-        IR AL DASHBOARD
-      </button>
+      <h1>IoT para Hogares Inteligentes</h1>
+
+      <Link to="/devices">Configuración de los dispositivos</Link>
+
+      <br/>
+      <br/>
+
+      <Link to="/dashboard">Panel de control</Link>
+
     </div>
-  );
-}
+  )
 
-export default Home;
+}
