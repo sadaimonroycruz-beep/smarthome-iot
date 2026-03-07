@@ -1,0 +1,18 @@
+# Node
+node_modules/
+package-lock.json
+
+# React
+build/
+
+# VSCode
+.vscode/
+
+# Logs
+*.log
+
+# Sistema
+.DS_Store
+
+# Archivos de entorno
+.env
