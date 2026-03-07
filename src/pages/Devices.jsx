@@ -1,20 +1,9 @@
-// src/pages/Devices.jsx
-import React from 'react';
-import PageContainer from '../components/PageContainer/PageContainer';
+import PageContainer from "../components/PageContainer/PageContainer";
 
 const Devices = () => {
   return (
     <PageContainer title="Devices">
-      <div className="cards-grid">
-        <div className="card">Active: 20</div>
-        <div className="card">Alerts: 15</div>
-        <div className="card">Users: 4</div>
-      </div>
-
-      <div className="chart">
-        <h3>Sensor Monitoring</h3>
-        <img src="/path-to-chart-image.png" alt="Gráfico" />
-      </div>
+      <p>Manage your connected devices.</p>
     </PageContainer>
   );
 };

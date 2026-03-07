@@ -1,23 +1,21 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import Devices from "./pages/Devices";
 import Settings from "./pages/Settings";
-import Menu from "./components/Menu";
 
 function App() {
   return (
     <BrowserRouter>
-
-      <Menu />
-
       <Routes>
+
         <Route path="/" element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/devices" element={<Devices />} />
         <Route path="/settings" element={<Settings />} />
-      </Routes>
 
+      </Routes>
     </BrowserRouter>
   );
 }

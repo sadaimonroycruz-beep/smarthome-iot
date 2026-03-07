@@ -1,18 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import PageContainer from "../components/PageContainer/PageContainer";
 
 const Home = () => {
   return (
-    <div style={{textAlign:"center", padding:"50px"}}>
-      <h1>SmartHome IoT</h1>
-      <p>Control y monitoreo de sensores inteligentes</p>
-
-      <Link to="/dashboard">
-        <button style={{padding:"10px 20px", marginTop:"20px"}}>
-          Ir al Dashboard
-        </button>
-      </Link>
-    </div>
+    <PageContainer title="SmartHome IoT">
+      <p>Welcome to SmartHome Control System</p>
+    </PageContainer>
   );
 };
 
