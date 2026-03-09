@@ -1,15 +1,22 @@
-import React from 'react';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import Dashboard from "./components/Dashboard";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Bienvenido a SmartHome IoT</h1>
-        <p>Controla tu hogar inteligente de manera fácil y rápida</p>
-        <a href="#!" className="btn">Empezar</a>
-      </header>
-    </div>
+    <BrowserRouter>
+
+      <Routes>
+
+        <Route path="/" element={<Home />} />
+
+        <Route path="/dashboard" element={<Dashboard />} />
+
+      </Routes>
+
+    </BrowserRouter>
   );
 }
 
