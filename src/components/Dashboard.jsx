@@ -1,51 +1,48 @@
-import Sidebar from "./Sidebar";
-import SensorChart from "./SensorChart";
+import { Container, Grid, Card, CardContent, Typography } from "@mui/material";
 
 export default function Dashboard() {
+
+  const sensores = [
+    { nombre: "Temperatura", valor: "24 °C" },
+    { nombre: "Humedad", valor: "60 %" },
+    { nombre: "Gas", valor: "Normal" },
+  ];
+
   return (
+    <Container sx={{ marginTop: 5 }}>
 
-    <div className="dashboard">
+      <Typography variant="h4" gutterBottom>
+        Dashboard Smart Home IoT
+      </Typography>
 
-      <Sidebar />
+      <Grid container spacing={3}>
 
-      <div className="content">
+        {sensores.map((sensor, index) => (
 
-        <h1>Dashboard</h1>
+          <Grid item xs={12} md={4} key={index}>
 
-        <div className="cards">
+            <Card>
 
-          <div className="card">
-            <h3>Devices</h3>
-            <p>20</p>
-          </div>
+              <CardContent>
 
-          <div className="card">
-            <h3>Active</h3>
-            <p>15</p>
-          </div>
+                <Typography variant="h6">
+                  {sensor.nombre}
+                </Typography>
 
-          <div className="card">
-            <h3>Alerts</h3>
-            <p>5</p>
-          </div>
+                <Typography variant="h4">
+                  {sensor.valor}
+                </Typography>
 
-          <div className="card">
-            <h3>Users</h3>
-            <p>4</p>
-          </div>
+              </CardContent>
 
-        </div>
+            </Card>
 
-        <div className="chart">
+          </Grid>
 
-          <h3>Sensor Monitoring</h3>
+        ))}
 
-          <SensorChart />
+      </Grid>
 
-        </div>
-
-      </div>
-
-    </div>
+    </Container>
   );
 }

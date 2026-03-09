@@ -1,22 +1,49 @@
-import { Link } from "react-router-dom";
+import { Container, Typography, Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
+
+  const navigate = useNavigate();
+
   return (
-    <div className="home">
+    <Container sx={{ textAlign: "center", marginTop: 10 }}>
 
-      <h1>IoT Monitoring System</h1>
-      <h2>Proyecto de Sensores Inteligentes</h2>
+      <Typography variant="h3" gutterBottom>
+        UNIVERSIDAD POLITÉCNICA DE ATLACOMULCO
+      </Typography>
 
-      <p>
-        Plataforma para monitorear sensores de temperatura y gas en tiempo real
-      </p>
+      <Typography variant="h5">
+        INGENIERÍA EN SISTEMAS COMPUTACIONALES
+      </Typography>
 
-      <Link to="/dashboard">
-        <button className="btn">
-          Ir al Dashboard
-        </button>
-      </Link>
+      <Typography variant="h6" sx={{ marginTop: 3 }}>
+        PROGRAMACIÓN WEB
+      </Typography>
 
-    </div>
+      <Typography variant="h6" sx={{ marginTop: 5 }}>
+        ALUMNO:
+      </Typography>
+
+      <Typography variant="h5">
+        ZURI SADAY MONROY CRUZ
+      </Typography>
+
+      <Typography variant="h6" sx={{ marginTop: 5 }}>
+        ING:
+      </Typography>
+
+      <Typography variant="h5">
+        JHOVANI DEL BOQUE FLORENTINO
+      </Typography>
+
+      <Button
+        variant="contained"
+        sx={{ marginTop: 6 }}
+        onClick={() => navigate("/dashboard")}
+      >
+        Ir al Dashboard
+      </Button>
+
+    </Container>
   );
 }
